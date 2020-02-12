@@ -59,8 +59,17 @@ export default {
     return {
       // 左侧菜单数据
       menulist: [
-        { id: 103, authName: '权限管理', path: 'rights', children: [{ id: 10, authName: '权限sdsdsd', path: 'rights', children: [], order: 1 }], order: 1 },
-        { id: 125, authName: '成员管理', path: 'rightsds', children: [{ id: 11, authName: '权sddd', path: 'users', children: [], order: 1 }], order: 2 }
+        { id: 125, authName: '成员管理', path: 'rightsds', children: [{ id: 3, authName: '权sddd', path: 'users', children: [], order: 1 }], order: 2 },
+        {
+          id: 103,
+          authName: '权限管理',
+          path: 'rights',
+          children: [
+            { id: 1, authName: '权限列表', path: 'rights', children: [], order: 1 },
+            { id: 2, authName: '角色列表', path: 'roles', children: [], order: 1 }
+          ],
+          order: 1
+        }
       ],
       iconsObj: {
         125: 'iconfont iconusers',
