@@ -76,7 +76,7 @@ export default {
           path: 'categories',
           children: [
             { id: 3, authName: '商品列表', path: '', children: [], order: 1 },
-            { id: 4, authName: '分类参数', path: '', children: [], order: 2 },
+            { id: 4, authName: '分类参数', path: 'params', children: [], order: 2 },
             { id: 5, authName: '商品分类', path: 'categories', children: [], order: 3 }
           ],
           order: 1
@@ -106,8 +106,8 @@ export default {
     // 获取所有的菜单
     async getMenuList () {
       const { data: res } = await this.$http.get('menu')
-      if (res.meta.data !== 200) return this.$message.error(res.meta.msg)
-      console.log(res)
+      // if (res.meta.data !== 200) return this.$message.error(res.meta.msg)
+      console.log(res.data)
     },
     // 点击按钮实现左侧菜单折叠展开
     toggleCollapse () {
