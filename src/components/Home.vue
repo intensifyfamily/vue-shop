@@ -69,6 +69,17 @@ export default {
             { id: 2, authName: '角色列表', path: 'roles', children: [], order: 1 }
           ],
           order: 1
+        },
+        {
+          id: 104,
+          authName: '商品管理',
+          path: 'categories',
+          children: [
+            { id: 3, authName: '商品列表', path: '', children: [], order: 1 },
+            { id: 4, authName: '分类参数', path: '', children: [], order: 2 },
+            { id: 5, authName: '商品分类', path: 'categories', children: [], order: 3 }
+          ],
+          order: 1
         }
       ],
       iconsObj: {
