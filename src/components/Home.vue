@@ -75,7 +75,7 @@ export default {
           authName: '商品管理',
           path: 'categories',
           children: [
-            { id: 3, authName: '商品列表', path: '', children: [], order: 1 },
+            { id: 3, authName: '商品列表', path: 'goods', children: [], order: 1 },
             { id: 4, authName: '分类参数', path: 'params', children: [], order: 2 },
             { id: 5, authName: '商品分类', path: 'categories', children: [], order: 3 }
           ],
