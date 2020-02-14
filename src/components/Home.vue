@@ -89,6 +89,15 @@ export default {
             { id: 6, authName: '订单列表', path: 'orders', children: [], order: 1 }
           ],
           order: 1
+        },
+        {
+          id: 106,
+          authName: '数据统计',
+          path: 'categories',
+          children: [
+            { id: 7, authName: '数据报表', path: 'reports', children: [], order: 1 }
+          ],
+          order: 1
         }
       ],
       iconsObj: {
