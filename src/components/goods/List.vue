@@ -60,7 +60,7 @@ export default {
         pagesize: 10
       },
       goodslist: [],
-      total: ''
+      total: 0
     }
   },
   created () {

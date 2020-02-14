@@ -155,7 +155,7 @@ export default {
         return this.$message.error('获取商品分类数据失败!')
       }
       this.catelist = res.data
-      console.log(this.catelist)
+      // console.log(this.catelist)
     },
     handleChange () {
       if (this.addForm.goods_cat.length !== 3) {
@@ -194,7 +194,7 @@ export default {
         if (res.meta.status !== 200) {
           return this.$message.error('获取静态属性失败！')
         }
-        console.log(res.data)
+        // console.log(res.data)
         this.onlyTableData = res.data
       }
     },
@@ -208,7 +208,7 @@ export default {
       const filePath = file.response.data.tmp_path
       const i = this.addForm.pics.findIndex(x => x.pic === filePath)
       this.addForm.pics.splice(i, 1)
-      console.log(this.addForm)
+      // console.log(this.addForm)
     },
     // 监听图片上传成功的操作
     handleSuccess (response) {

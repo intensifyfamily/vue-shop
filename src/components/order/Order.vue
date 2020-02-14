@@ -36,9 +36,9 @@
           </template>
         </el-table-column>
         <el-table-column label="操作">
-          <template slot-scope="scope">
+          <template>
             <el-button type="primary" icon="el-icon-edit" size="mini" @click="showBox"></el-button>
-            <el-button type="success" icon="el-icon-location" size="mini" @click="showProgressBox">{{scope.row.id}}</el-button>
+            <el-button type="success" icon="el-icon-location" size="mini" @click="showProgressBox"></el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -78,7 +78,7 @@
       :visible.sync="progressVisible"
       width="50%">
       <!--时间线-->
-      <el-timeline :reverse="reverse">
+      <el-timeline>
         <el-timeline-item
           v-for="(activity, index) in progressInfo"
           :key="index"
@@ -156,7 +156,7 @@ export default {
       }
       this.progressInfo = res.data
       this.progressVisible = true
-      console.log(this.progressInfo)
+      // console.log(this.progressInfo)
     }
   }
 }

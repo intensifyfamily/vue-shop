@@ -240,25 +240,25 @@ export default {
       if (res.meta.status !== 200) return this.$message.error('获取用户列表失败！')
       this.userlist = res.data.users
       this.total = res.data.total
-      console.log(res)
+      // console.log(res)
     },
     // 监听 pagesize 改变的事件
     handleSizeChange (newSize) {
-      console.log(newSize)
+      // console.log(newSize)
       this.queryInfo.pagesize = newSize
       this.getUserList()
     },
     // 监听页码值改变的事件
     handleCurrentChange (newPage) {
-      console.log(newPage)
+      // console.log(newPage)
       this.queryInfo.pagenum = newPage
       this.getUserList()
     },
     // 监听 switch 开关状态的改变
     async userStateChange (userinfo) {
-      console.log(userinfo)
+      // console.log(userinfo)
       const { data: res } = await this.$http.put(`users/${userinfo.id}/state/${userinfo.mg_state}`)
-      console.log(res)
+      // console.log(res)
       if (res.meta.status !== 200) {
         userinfo.mg_state = !userinfo.mg_state
         return this.$message.error('更新用户状态失败')

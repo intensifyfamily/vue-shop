@@ -32,7 +32,7 @@
                     <i class="el-icon-caret-right"></i>
                   </el-col>
                   <el-col :span="18">
-                    <el-tag type="warning" v-for="(item3, i3) in item2.children" :key="item3.id" :class="i3" closable @close="removeRightById(scope.row, item3.id)">{{item3.authName}}</el-tag>
+                    <el-tag type="warning" v-for="item3 in item2.children" :key="item3.id" closable @close="removeRightById(scope.row, item3.id)">{{item3.authName}}</el-tag>
                   </el-col>
                 </el-row>
               </el-col>
@@ -214,7 +214,7 @@ export default {
       }
       // 把获取的数据保存到 data 中
       this.rightslist = res.data
-      console.log(this.rightslist)
+      // console.log(this.rightslist)
       // 递归获取三级节点的数据
       this.getLeafKeys(role, this.defKeys)
       this.setRightDialogVisible = true

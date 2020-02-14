@@ -193,7 +193,7 @@ export default {
         return this.$message.error('获取商品分类失败！')
       }
       this.catelist = res.data
-      console.log(this.catelist)
+      // console.log(this.catelist)
     },
     // 级联选择框选中项变化，会差法这个函数
     handleChange () {
@@ -201,7 +201,7 @@ export default {
     },
     // Tab 页签点击事件的处理函数
     handleTabClick () {
-      console.log(this.activeName)
+      // console.log(this.activeName)
       this.getParamsData()
     },
     // 获取参数的列表数据
@@ -214,7 +214,7 @@ export default {
         return null
       }
       // 证明选中的是三级分类
-      console.log(this.selectedCateKeys)
+      // console.log(this.selectedCateKeys)
       // 根据所选分类的id和当前所处的面板,获取对应的参数
       const { data: res } = await this.$http.get(`categories/${this.cateId}/attributes`, {
         params: {
@@ -230,7 +230,7 @@ export default {
         item.inputVisible = false
         item.inputValue = ''
       })
-      console.log(res.data)
+      // console.log(res.data)
       if (this.activeName === 'many') {
         this.manyTableData = res.data
       }

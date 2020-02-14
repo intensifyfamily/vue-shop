@@ -59,7 +59,7 @@ export default {
     return {
       // 左侧菜单数据
       menulist: [
-        { id: 125, authName: '成员管理', path: 'rightsds', children: [{ id: 3, authName: '权sddd', path: 'users', children: [], order: 1 }], order: 2 },
+        { id: 125, authName: '成员管理', path: 'rightsds', children: [{ id: 3, authName: '成员列表', path: 'users', children: [], order: 1 }], order: 2 },
         {
           id: 103,
           authName: '权限管理',
@@ -123,9 +123,9 @@ export default {
     },
     // 获取所有的菜单
     async getMenuList () {
-      const { data: res } = await this.$http.get('menu')
+      // const { data: res } = await this.$http.get('menu')
       // if (res.meta.data !== 200) return this.$message.error(res.meta.msg)
-      console.log(res.data)
+      // console.log(res.data.id)
     },
     // 点击按钮实现左侧菜单折叠展开
     toggleCollapse () {
