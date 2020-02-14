@@ -80,6 +80,15 @@ export default {
             { id: 5, authName: '商品分类', path: 'categories', children: [], order: 3 }
           ],
           order: 1
+        },
+        {
+          id: 105,
+          authName: '订单管理',
+          path: 'categories',
+          children: [
+            { id: 6, authName: '订单列表', path: 'orders', children: [], order: 1 }
+          ],
+          order: 1
         }
       ],
       iconsObj: {
